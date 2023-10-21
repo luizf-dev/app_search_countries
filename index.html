@@ -11,8 +11,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <!-- Image and text -->
-        <nav class="navbar">
+        <nav class="navbar fixed-top">
             <div class="container">
                 <img src="assets/img/icon.png" width="40" height="40" alt="">
                 <a class="navbar-brand link" href="index.html">                    
@@ -23,9 +22,10 @@
         <div class="container">
             <div class="content">
                 <form id="form">
-                    <label for="country">Digite o nome do País
-                        <input type="text" id="country">
-                    </label>
+                    <label for="country">Pesquise pelo nome do País</label>                        
+                    <select class="form-control"id="country">
+                        <option value="">Selecione um País</option>
+                    </select><br>
                     <button onclick="getDataCountry()" type="submit">Pesquisar</button>
                 </form>
             </div>                        

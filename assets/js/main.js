@@ -6,7 +6,7 @@ const form = document.getElementById('form');
 const result = document.getElementById('divResult');
 const flag = document.getElementById('divFlag');
 const brasao = document.getElementById('divBrasao');
-const rowDiv = document.querySelector('.row'); 
+const rowDiv = document.querySelector('.row');
 
 //* Evita que o formulário seja enviado e a página recarregada automaticamente
 form.addEventListener('submit', function(event){
@@ -144,11 +144,7 @@ function getDataCountry(){
 
             if(brasaoUrl){
                 brasao.innerHTML = `<p><span>Brasão: </span></p><img class="brasao" src="${brasaoUrl}">`;  
-            }
-           
-
-            
-            
+            }                 
                                            
         })
         .catch(error => {
@@ -157,5 +153,32 @@ function getDataCountry(){
         });
 }
 
-
+//* Chamada da função para a requisição http
 getDataCountry();
+
+
+//* Chamada do arquivo JSON com a lista de países
+fetch('assets/json/paises.json')
+    .then(response => response.json())
+    .then(data => {
+
+        const countrySelect = document.getElementById('country');
+
+        //* Loop no array de paises
+        data.forEach(pais => {
+
+            const option = document.createElement('option');
+            option.value = pais.nameEnglish;
+            option.textContent = pais.namePT;
+            countrySelect.appendChild(option);
+            
+        });
+
+
+    })
+    .catch(error => {
+        console.error('Erro ao carregar o arquivo JSON: ' + error)
+    });
+
+
+
