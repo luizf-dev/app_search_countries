@@ -1,3 +1,26 @@
+if(typeof localStorage.welcome === 'undefined'){
+    showMsg();
+}
+
+function showMsg(){
+
+    Swal.fire({
+        position: 'center',
+        title: 'Bem-vindo ao App Search Countries!',
+        text: 'Explore informações detalhadas sobre países de todo o mundo. Pesquise por nomes de países para descobrir dados como capital, população, moeda, bandeira, brasão e muito mais. Divirta-se explorando!',
+        showConfirmButton: false,
+        timer: 20000,
+        background: '#fff',
+        customClass: {
+            title: 'custom-title',            
+        }        
+      });
+
+    localStorage.setItem('welcome', true);
+}
+
+
+
 //* Seleciona o formulario
 const form = document.getElementById('form');
 
@@ -16,7 +39,6 @@ form.addEventListener('submit', function(event){
 
 //* Função para buscar informações de um País
 function getDataCountry(){
-
 
     //* Seleciona o input
     const country = document.getElementById('country').value;
@@ -63,7 +85,7 @@ function getDataCountry(){
                 break;                
            } 
 
-           //*|| Itera pelas chaves do objeto currencies ====||
+           //*|| Itera pelas chaves do objeto currencies ||
            let currency;
            let currencyCode;
            let currencySymbol;

@@ -117,6 +117,13 @@ p {
   margin-left: 15px;
 }  
 
+.custom-title{
+  color: #84b082;
+  font-weight: 900;
+  text-shadow: 2px 1px 1px #000;
+}
+
+
 
 @media (max-width: 575.98px) {
 
