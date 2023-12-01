@@ -1,8 +1,7 @@
-if(typeof localStorage.welcome === 'undefined'){
-    showMsg();
-}
+//* mensagem de boas vindas ao usuário-------------------
+const mensagem = sessionStorage.getItem('exibido');
 
-function showMsg(){
+if(!mensagem){
 
     Swal.fire({
         position: 'center',
@@ -16,8 +15,9 @@ function showMsg(){
         }        
       });
 
-    localStorage.setItem('welcome', true);
+    sessionStorage.setItem('exibido', true);
 }
+//*-------------------------------------------------------
 
 
 
