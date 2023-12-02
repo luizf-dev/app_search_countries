@@ -1,18 +1,26 @@
 //* mensagem de boas vindas ao usuário-------------------
 const mensagem = sessionStorage.getItem('exibido');
 
+
 if(!mensagem){
 
     Swal.fire({
+        imageUrl: 'assets/img/icon.png',
+        imageWidth: 100,
+        imageHeight: 100,
+        imageAlt: 'logo',
         position: 'center',
-        title: 'Bem-vindo ao App Search Countries!',
-        text: 'Explore informações detalhadas sobre países de todo o mundo. Pesquise por nomes de países para descobrir dados como capital, população, moeda, bandeira, brasão e muito mais. Divirta-se explorando!',
-        showConfirmButton: false,
-        timer: 20000,
-        background: '#fff',
+        title: '<strong class="saudacao">Olá!<br><br></strong>Bem-vindo ao App Search Countries!',
+        html: '<p class="texto">Explore informações detalhadas sobre países de todo o mundo. Pesquise por nomes de países para descobrir dados como capital, população, moeda, bandeira, brasão e muito mais. Divirta-se explorando!</p>',
+        showConfirmButton: true,
+        confirmButtonText: "Vamos lá!!",
+        confirmButtonColor: "#84b082",
+        background: '#0d2c54',
         customClass: {
-            title: 'custom-title',            
-        }        
+            title: 'custom-title', 
+            confirmButton: 'custom-button'
+        }
+      
       });
 
     sessionStorage.setItem('exibido', true);

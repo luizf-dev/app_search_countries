@@ -117,10 +117,28 @@ p {
   margin-left: 15px;
 }  
 
+.saudacao{
+  color: #84b082;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+
 .custom-title{
   color: #84b082;
   font-weight: 900;
   text-shadow: 2px 1px 1px #000;
+}
+
+.texto{
+  color: #fff;
+  text-align:center;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.custom-button{
+  width: 200px;
+  font-weight: 900; 
+  text-transform:capitalize
 }
 
 
@@ -147,6 +165,14 @@ p {
 
   .flag, .brasao{
     width: 95%;
+  }
+
+  .custom-title{
+    font-size: 1.2em;
+  }
+
+  .texto{
+    font-size: 0.9em;
   }
 
 }
