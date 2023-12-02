@@ -119,8 +119,8 @@ p {
 
 .saudacao{
   color: #84b082;
-  text-transform: uppercase;
-  font-size: 1.4em;
+  text-transform: capitalize;
+  font-size: 1.1em;
 }
 
 .custom-title{

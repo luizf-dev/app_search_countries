@@ -1,6 +1,23 @@
+//*obtem a data e hora atual
+var data = new Date();
+const hora = data.getHours();
+
+//* Função para saudar o usuário com base na hora
+const saudarUsuario = () => {
+    if(hora >= 5 &&  hora < 12){
+        return 'Bom Dia!';
+    }else if(hora >= 12 && hora < 18){
+        return 'Boa Tarde!';
+    }else{
+        return 'Boa Noite!';
+    }
+}
+
+//*saudação
+const saudacao = `<strong class="saudacao">${saudarUsuario()}</strong><br> Bem-vindo ao App Search Countries! `;
+
 //* mensagem de boas vindas ao usuário-------------------
 const mensagem = sessionStorage.getItem('exibido');
-
 
 if(!mensagem){
 
@@ -10,20 +27,19 @@ if(!mensagem){
         imageHeight: 100,
         imageAlt: 'logo',
         position: 'center',
-        title: '<strong class="saudacao">Olá!<br><br></strong>Bem-vindo ao App Search Countries!',
+        title: saudacao,
         html: '<p class="texto">Explore informações detalhadas sobre países de todo o mundo. Pesquise por nomes de países para descobrir dados como capital, população, moeda, bandeira, brasão e muito mais. Divirta-se explorando!</p>',
         showConfirmButton: true,
         confirmButtonText: "Vamos lá!!",
         confirmButtonColor: "#84b082",
-        background: '#0d2c54',
+        background: 'rgba(13,44,84,0.98)',
         customClass: {
             title: 'custom-title', 
             confirmButton: 'custom-button'
-        }
-      
-      });
+        }      
+    });
 
-    sessionStorage.setItem('exibido', true);
+   //sessionStorage.setItem('exibido', true);
 }
 //*-------------------------------------------------------
 
