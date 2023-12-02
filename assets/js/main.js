@@ -19,8 +19,6 @@ if(!mensagem){
 }
 //*-------------------------------------------------------
 
-
-
 //* Seleciona o formulario
 const form = document.getElementById('form');
 

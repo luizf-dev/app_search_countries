@@ -20,4 +20,4 @@ uma experiência interativa, exibindo a bandeira e o brasão do país pesquisado
 - JavaScript
 - HTML
 - CSS
-- API REST Countries (ou insira aqui a API que você está utilizando)
+- API REST Countries
