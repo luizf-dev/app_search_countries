@@ -39,7 +39,7 @@ if(!mensagem){
         }      
     });
 
-   //sessionStorage.setItem('exibido', true);
+   sessionStorage.setItem('exibido', true);
 }
 //*-------------------------------------------------------
 
